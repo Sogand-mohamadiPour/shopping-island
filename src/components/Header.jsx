@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import { FaShoppingBasket, FaBars, FaTimes } from "react-icons/fa";
 
 import { useTheme } from "../context/ThemeContext";
@@ -12,18 +12,16 @@ function Header() {
   const { darkMode, toggleTheme } = useTheme();
   const [state] = useBasket();
 
-  const navigate = useNavigate();
-
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
   return (
     <header className={styles.header}>
-      <div className={styles.brand} onClick={() => navigate("/")}>
+      <Link to='/' className={styles.brand}>
         <img src="../../public/logo.webp" className={styles.logo} />
         <span className={styles.brandName}>Shopping Island</span>
-      </div>
+      </Link>
 
       <nav className={styles.desktopNav}>
         <Link to="/">Home</Link>
