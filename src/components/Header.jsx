@@ -18,8 +18,13 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <Link to='/' className={styles.brand}>
-        <img src="../../public/logo.webp" className={styles.logo} />
+      <Link to="/" className={styles.brand}>
+        <img
+          src="/logo.webp"
+          className={styles.logo}
+          alt="Shopping Island"
+        />
+
         <span className={styles.brandName}>Shopping Island</span>
       </Link>
 
@@ -42,14 +47,27 @@ function Header() {
         <Link to="/basket">
           <FaShoppingBasket className={styles.icons} />
 
-          <span className={styles.countBasket}>{state.countAll}</span>
+          <span className={styles.countBasket}>
+            {state.countAll}
+          </span>
         </Link>
       </div>
 
       <div className={styles.mobileControls}>
+        <button
+          className={styles.themeButton}
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+
         <Link to="/basket">
           <FaShoppingBasket className={styles.icons} />
-          <span className={styles.countBasket}>{state.countAll}</span>
+
+          <span className={styles.countBasket}>
+            {state.countAll}
+          </span>
         </Link>
 
         <button
@@ -70,12 +88,15 @@ function Header() {
         <Link to="/" onClick={closeMenu}>
           Home
         </Link>
+
         <Link to="/products" onClick={closeMenu}>
           Products
         </Link>
+
         <Link to="/about" onClick={closeMenu}>
           FAQ
         </Link>
+
         <Link to="/contactus" onClick={closeMenu}>
           Contact Us
         </Link>
