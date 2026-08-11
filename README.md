@@ -1,18 +1,203 @@
-# React + Vite
+# 🛍️🏝️ Shopping Island
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive e-commerce frontend built with **React** and **React Router**.
 
-Currently, two official plugins are available:
+Shoppini Center allows users to browse products, search and filter by category, view detailed product information, add products to a shopping basket, and switch between light and dark themes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+* 🏠 Independent landing/home page
+* 🛍️ Product listing page
+* 🔎 Product search
+* 🗂️ Category filtering
+* 📦 Product details page
+* 🛒 Shopping basket
+* ➕ Increase product quantity
+* ➖ Decrease product quantity
+* 🗑️ Remove products from basket
+* 💰 Automatic basket total calculation
+* 🔢 Basket item counter
+* 🌙 Dark / Light mode
+* 💾 Theme preference saved in `localStorage`
+* 📱 Responsive design
+* 🧭 Client-side routing
+* ⏳ Loading states
+* ❌ Error handling
+* ❓ FAQ / About page with accordion
+* 📱 Responsive mobile navigation
+* 🦶 Responsive footer
+* 🎨 CSS Modules for component-specific styling
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **React**
+* **React Router**
+* **JavaScript (JSX)**
+* **CSS Modules**
+* **React Icons**
+* **Context API**
+* **useReducer**
+* **useState**
+* **useEffect**
+* **localStorage**
+* **Fake Store API**
+
+---
+
+## 🧠 What This Project Demonstrates
+
+This project was built to practice and demonstrate several important React concepts.
+
+### Context API
+
+Global application state is handled with React Context.
+
+Two main contexts are used:
+
+```text
+ProductContext
+BasketContext
+```
+
+The basket context provides access to:
+
+* Basket products
+* Product quantities
+* Total price
+* Total item count
+* Basket actions
+
+---
+
+### useReducer
+
+Basket operations are managed with `useReducer`.
+
+Available actions include:
+
+```text
+add
+plus
+minus
+delete
+```
+
+This keeps basket state management centralized instead of handling it separately inside every component.
+
+---
+
+### React Router
+
+The application uses client-side routing for navigation between pages.
+
+Example routes:
+
+```text
+/
+├── /products
+│   └── /products/:id
+├── /basket
+├── /about
+└── /contactus
+```
+
+---
+
+### Dynamic Product Pages
+
+Each product has its own URL:
+
+```text
+/products/1
+/products/2
+/products/3
+```
+
+The product ID is obtained using:
+
+```jsx
+const { id } = useParams();
+```
+
+and the corresponding product is displayed on the details page.
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+│
+├── components/
+│   ├── Card.jsx
+│   ├── Footer.jsx
+│   ├── Header.jsx
+│   └── Loading.jsx
+│
+├── context/
+│   ├── ProductContext.jsx
+│   └── BasketContext.jsx
+│
+├── css/
+│   ├── Header.module.css
+│   ├── Footer.module.css
+│   ├── Card.module.css
+│   ├── Home.module.css
+│   ├── PageProduct.module.css
+│   ├── DetailsProduct.module.css
+│   └── ...
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── PageProducts.jsx
+│   ├── DetailsProduct.jsx
+│   ├── Basket.jsx
+│   ├── About.jsx
+│   ├── ContactUs.jsx
+│   └── Page404.jsx
+│
+├── App.jsx
+├── Layout.jsx
+├── App.css
+└── main.jsx
+```
+
+---
+
+## 🔎 Product Search & Filtering
+
+The products page supports searching by product title.
+
+Users can also filter products by category:
+
+```text
+All
+Men's Clothing
+Women's Clothing
+Electronics
+Jewelry
+```
+
+Search and category filtering can be combined.
+
+---
+
+## 🌐 API
+
+Product information is retrieved from the **Fake Store API**.
+
+The application uses the API to retrieve products including:
+
+* Product title
+* Price
+* Category
+* Image
+* Description
+* Rating
+
+```
+```
