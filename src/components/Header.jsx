@@ -2,12 +2,15 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { FaShoppingBasket, FaBars, FaTimes } from "react-icons/fa";
 
+import { useTheme } from "../context/ThemeContext";
 import { useBasket } from "../context/basket/useBasket";
 import styles from "../css/Header.module.css";
 
 function Header() {
-  const [state] = useBasket();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { darkMode, toggleTheme } = useTheme();
+  const [state] = useBasket();
 
   const navigate = useNavigate();
 
@@ -29,12 +32,19 @@ function Header() {
         <Link to="/contactus">Contact Us</Link>
       </nav>
 
-      <div className={styles.desktopBasket}>
+      <div className={styles.headerActions}>
+        <button
+          className={styles.themeButton}
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+
         <Link to="/basket">
           <FaShoppingBasket className={styles.icons} />
-          {state.countAll > 0 && (
-            <span className={styles.countBasket}>{state.countAll}</span>
-          )}
+
+          <span className={styles.countBasket}>{state.countAll}</span>
         </Link>
       </div>
 
