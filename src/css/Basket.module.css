@@ -1,0 +1,390 @@
+.basketPage {
+  width: min(1400px, calc(100% - 60px));
+  margin: 120px auto 80px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.smallTitle {
+  color: #f97316;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.pageHeader h1 {
+  margin: 7px 0 5px;
+  color: #18181b;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.pageHeader p {
+  margin: 0;
+  color: #71717a;
+  font-size: 14px;
+}
+
+.continueShopping {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  color: #52525b;
+  border: 1px solid #e4e4e7;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.continueShopping:hover {
+  background: #18181b;
+  color: white;
+  border-color: #18181b;
+}
+
+.basketContent {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 30px;
+  align-items: start;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.basketItem {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  background: white;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.basketItem:hover {
+  border-color: #fed7aa;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.imageContainer {
+  width: 115px;
+  height: 115px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  border-radius: 12px;
+}
+
+.imageContainer img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.productInfo {
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 25px;
+}
+
+.productInfo h2 {
+  max-width: 450px;
+  margin: 0 0 8px;
+  color: #18181b;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price {
+  margin-bottom: 14px;
+  color: #f97316;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.quantity {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quantity button {
+  width: 32px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #f4f4f5;
+  color: #52525b;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.quantity button:hover {
+  background: #18181b;
+  color: white;
+}
+
+.quantity button svg {
+  font-size: 9px;
+}
+
+.quantity span {
+  width: 35px;
+  text-align: center;
+  color: #18181b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.itemRight {
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.itemRight strong {
+  color: #18181b;
+  font-size: 17px;
+}
+
+.deleteButton {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #a1a1aa;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.deleteButton:hover {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.deleteButton svg {
+  font-size: 14px;
+}
+
+.summary {
+  padding: 25px;
+  background: #18181b;
+  color: white;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.summary h2 {
+  margin: 0 0 25px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #a1a1aa;
+  font-size: 13px;
+}
+
+.summaryRow span:last-child {
+  color: #e4e4e7;
+  font-weight: 600;
+}
+
+.free {
+  color: #fb923c !important;
+}
+
+.divider {
+  height: 1px;
+  margin: 20px 0;
+  background: #27272a;
+}
+
+.totalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.totalRow span {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.totalRow strong {
+  color: #f97316;
+  font-size: 24px;
+}
+
+.checkoutButton {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 9px;
+  background: #f97316;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.checkoutButton:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
+}
+
+.secureText {
+  margin: 15px 0 0;
+  color: #71717a;
+  text-align: center;
+  font-size: 11px;
+}
+
+.emptyBasket {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 50px;
+}
+
+.emptyIcon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #fff7ed;
+  border-radius: 20px;
+  font-size: 35px;
+}
+
+.emptyBasket h1 {
+  margin: 0 0 8px;
+  color: #18181b;
+  font-size: 28px;
+}
+
+.emptyBasket p {
+  margin: 0 0 25px;
+  color: #71717a;
+  font-size: 14px;
+}
+
+.shopButton {
+  padding: 12px 22px;
+  background: #f97316;
+  color: white;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.shopButton:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 900px) {
+  .basketContent {
+    grid-template-columns: 1fr;
+  }
+
+  .summary {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .basketPage {
+    width: calc(100% - 30px);
+    margin-top: 105px;
+  }
+
+  .pageHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pageHeader h1 {
+    font-size: 28px;
+  }
+
+  .basketItem {
+    padding: 12px;
+  }
+
+  .imageContainer {
+    width: 85px;
+    height: 85px;
+  }
+
+  .productInfo {
+    padding: 0 12px;
+  }
+
+  .productInfo h2 {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 13px;
+  }
+
+  .itemRight {
+    height: 85px;
+  }
+
+  .itemRight strong {
+    font-size: 14px;
+  }
+}

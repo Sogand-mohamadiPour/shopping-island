@@ -1,0 +1,290 @@
+.page {
+  width: min(1000px, calc(100% - 40px));
+  margin: 120px auto 80px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.label {
+  color: #f97316;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  margin: 10px 0;
+  color: #18181b;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  color: #71717a;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 55px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: white;
+  border: 1px solid #e4e4e7;
+  border-radius: 13px;
+  transition: 0.2s ease;
+}
+
+.infoCard:hover {
+  border-color: #fed7aa;
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.infoIcon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff7ed;
+  color: #f97316;
+  border-radius: 10px;
+}
+
+.infoIcon svg {
+  font-size: 17px;
+}
+
+.infoCard h3 {
+  margin: 0 0 4px;
+  color: #18181b;
+  font-size: 13px;
+}
+
+.infoCard p {
+  margin: 0;
+  color: #71717a;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.faqSection {
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+}
+
+.sectionTitle > svg {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #18181b;
+  color: #f97316;
+  border-radius: 10px;
+}
+
+.sectionTitle span {
+  color: #f97316;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.sectionTitle h2 {
+  margin: 3px 0 0;
+  color: #18181b;
+  font-size: 22px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faqItem {
+  background: white;
+  border: 1px solid #e4e4e7;
+  border-radius: 11px;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+
+.faqItem:hover {
+  border-color: #d4d4d8;
+}
+
+.faqItem.active {
+  border-color: #fed7aa;
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.question {
+  width: 100%;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  border: none;
+  background: transparent;
+  color: #27272a;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.question:hover {
+  color: #f97316;
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: #a1a1aa;
+  font-size: 11px;
+  transition: transform 0.25s ease,
+              color 0.2s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  color: #f97316;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+}
+
+.answerOpen {
+  max-height: 150px;
+}
+
+.answer p {
+  margin: 0;
+  padding: 0 45px 18px 18px;
+  color: #71717a;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 30px;
+  background: #18181b;
+  border-radius: 16px;
+  color: white;
+}
+
+.help span {
+  color: #f97316;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.help h2 {
+  margin: 5px 0;
+  font-size: 22px;
+}
+
+.help p {
+  margin: 0;
+  color: #a1a1aa;
+  font-size: 13px;
+}
+
+.helpButton {
+  flex-shrink: 0;
+  padding: 12px 20px;
+  background: #f97316;
+  color: white;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.helpButton:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 800px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .infoCard {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .page {
+    width: calc(100% - 30px);
+    margin-top: 105px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .question {
+    min-height: 55px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .answer p {
+    padding: 0 14px 16px;
+    font-size: 12px;
+  }
+
+  .help {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .helpButton {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

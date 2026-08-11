@@ -1,0 +1,311 @@
+.header {
+  width: min(1400px, calc(100% - 40px));
+  height: 64px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #18181b;
+  color: white;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffff;
+  color: white;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.brandName {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.desktopNav a {
+  display: block;
+  padding: 9px 14px;
+  color: #a1a1aa;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.desktopNav a:hover {
+  color: white;
+  background-color: #27272a;
+}
+
+.desktopBasket {
+  min-width: 200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.desktopBasket a {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.desktopBasket a:hover {
+  background-color: #27272a;
+
+  transform: translateY(-2px);
+}
+
+.icons {
+  font-size: 21px;
+  color: white;
+}
+
+.countBasket {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  min-width: 15px;
+  height: 18px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ef4444;
+  color: white;
+  border: 2px solid #18181b;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mobileControls {
+  display: none;
+}
+
+.mobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: calc(100% - 30px);
+    height: 60px;
+    top: 15px;
+    padding: 0 15px;
+    border-radius: 14px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brandName {
+    font-size: 15px;
+  }
+
+  .desktopNav,
+  .desktopBasket {
+    display: none;
+  }
+
+  .mobileControls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .mobileBasket,
+  .menuButton {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+
+  .mobileBasket {
+    position: relative;
+  }
+
+  .mobileBasket:hover,
+  .menuButton:hover {
+    background: #27272a;
+  }
+
+
+  .menuButton {
+    font-size: 20px;
+  }
+
+  .mobileNav {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #18181b;
+    border-radius: 14px;
+    box-shadow:
+      0 15px 35px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+  .mobileNavOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .mobileNav a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 15px;
+    color: #a1a1aa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 9px;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .mobileNav a:hover {
+    color: white;
+    background: #27272a;
+  }
+
+  .menuBasket {
+    margin-top: 5px;
+    justify-content: space-between;
+    border-top: 1px solid #27272a;
+    border-radius: 0 0 9px 9px !important;
+  }
+
+
+  .menuBasket span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menuBasket svg {
+    color: #f97316;
+    font-size: 16px;
+  }
+
+  .menuCount {
+    min-width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    background: #ef4444;
+    color: white;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .countBasket {
+    top: 5px;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    width: calc(100% - 20px);
+    top: 10px;
+    padding: 0 10px;
+  }
+
+  .brandName {
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .mobileBasket,
+  .menuButton {
+    width: 38px;
+    height: 38px;
+  }
+
+  .countBasket {
+    top: 1px;
+    right: 40px;
+  }
+}

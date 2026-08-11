@@ -1,0 +1,30 @@
+.pagination {
+    width: 50%;
+    height: 50px;
+    box-shadow: 1px 1px 10px rgb(159, 158, 158);
+    display: flex;
+}
+
+.page {
+    width: 20%;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 2rem;
+}
+
+.products {
+    width: 80%;
+    height: auto;
+    display: flex;
+    box-shadow: 1px 1px 10px rgb(159, 158, 158);
+    margin: 100px auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cart {
+    width: 30%;
+    height: 250px;
+    box-shadow: 1px 1px 10px rgb(159, 158, 158);
+}
