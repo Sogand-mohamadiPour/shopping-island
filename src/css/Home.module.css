@@ -1,29 +1,48 @@
+.home {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
 .hero {
-  min-height: 580px;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: 40px;
+    min-height: 580px;
+    margin-top: 105px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
 }
 
 .heroContent {
   max-width: 620px;
 }
 
-.hero h2 {
-  margin: 14px 0 20px;
-  color: var(--text-primary);
-  font-size: clamp(30px, 5vw, 68px);
+.heroLabel {
+    color: #f97316;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
 }
 
-.hero h2 span {
-  display: block;
-  color: var(--primary);
+.hero h1 {
+    margin: 14px 0 20px;
+    color: #18181b;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #f97316;
 }
 
 .hero p {
-  color: var(--text-secondary);
-  font-size: 18px;
+    max-width: 520px;
+    margin-bottom: 30px;
+    color: #71717a;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 .heroButtons {
@@ -74,68 +93,72 @@
 }
 
 .circle {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  background: var(--border);
-  border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    background: #fff7ed;
+    border-radius: 50%;
 }
 
 .heroCard {
-  width: 250px;
-  height: 100px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 15px;
-  background: var(--bg-dark);
-  color: white;
-  border-radius: 20px;
-  transform: rotate(-4deg);
-  box-shadow: 0 25px 50px var(--shadow);
+    width: 280px;
+    height: 190px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 25px;
+    box-sizing: border-box;
+    background: #18181b;
+    color: white;
+    border-radius: 20px;
+    transform: rotate(-6deg);
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.2);
 }
 
 .heroCardIcon {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--primary);
-  border-radius: 14px;
-  font-weight: 800;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f97316;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .heroCard span {
-  display: block;
-  margin-bottom: 5px;
-  color: var(--primary);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
+    color: #f97316;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
-.heroCard div {
-  font-size: 15px;
-  line-height: 1.4;
+.heroCard strong {
+    font-size: 15px;
+    line-height: 1.4;
 }
 
 .floatingCard {
-  position: absolute;
-  right: 10%;
-  bottom: 65px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 15px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  box-shadow: 0 10px 25px var(--shadow);
-  color: var(--text-secondary);
-  font-size: 12px;
-  font-weight: 600;
+    position: absolute;
+    right: 5%;
+    bottom: 65px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 15px;
+    background: white;
+    border: 1px solid #e4e4e7;
+    border-radius: 10px;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+    color: #52525b;
+    font-size: 11px;
+    font-weight: 600;
 }
 
 .floatingCard svg {
@@ -149,18 +172,38 @@
   margin-bottom: 25px;
 }
 
+.sectionHeading span,
+.featureHeading>span,
+.cta span {
+    color: #f97316;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.sectionHeading h2 {
+    margin: 5px 0 0;
+    color: #18181b;
+    font-size: 25px;
+}
+
 .sectionHeading>a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #52525b;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .sectionHeading>a:hover {
-  color: var(--primary);
+    color: #f97316;
 }
 
-
+.categories {
+    margin-bottom: 100px;
+}
 
 .categoryGrid {
   display: grid;
@@ -169,20 +212,20 @@
 }
 
 .categoryCard {
-  min-height: 190px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 22px;
-  overflow: hidden;
-  color: white;
-  border-radius: 15px;
-  text-decoration: none;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-  background: #52525b;
+    min-height: 190px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .categoryCard:hover {
@@ -191,11 +234,11 @@
 }
 
 .categoryCard>span {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  opacity: 0.5;
-  font-size: 11px;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    opacity: 0.5;
+    font-size: 11px;
 }
 
 .categoryCard h3 {
@@ -221,13 +264,30 @@
   opacity: 1;
 }
 
+.clothing {
+    background: #18181b;
+}
+
+.electronics {
+    background: #27272a;
+}
+
+.jewelry {
+    background: #3f3f46;
+}
+
+.women {
+    background: #52525b;
+}
+
 .features {
-  padding: 55px;
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 50px;
-  background: var(--primary-light);
-  border-radius: 20px;
+    margin-bottom: 100px;
+    padding: 55px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+    background: #fff7ed;
+    border-radius: 20px;
 }
 
 .featureHeading h2 {
@@ -237,13 +297,11 @@
 }
 
 .featureHeading p {
-  color: var(--text-secondary);
-  font-size: 14px;
-}
-
-.featureHeading span {
-  color: var(--primary);
-  font-weight: 600;
+    max-width: 280px;
+    margin: 0;
+    color: #71717a;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
 .featureGrid {
@@ -253,26 +311,32 @@
 }
 
 .featureIcon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-card);
-  color: var(--primary);
-  border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #f97316;
+    border-radius: 10px;
 }
 
+.feature h3 {
+    margin: 0 0 7px;
+    color: #18181b;
+    font-size: 13px;
+}
 
 .feature p {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--text-secondary);
+    margin: 0;
+    color: #71717a;
+    font-size: 11px;
+    line-height: 1.6;
 }
 
 .featured {
-  margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 .productGrid {
@@ -281,38 +345,60 @@
   gap: 30px;
 }
 
-.cta h5{
-  margin: 7px 0;
+.loading,
+.error {
+    grid-column: 1 / -1;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    color: #ef4444;
 }
 
 .cta {
-  margin-bottom: 50px;
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--bg-dark);
-  color: white;
-  border-radius: 18px;
-  font-size: 20px;
+    margin-bottom: 80px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: #18181b;
+    color: white;
+    border-radius: 18px;
+}
+
+.cta h2 {
+    margin: 7px 0;
+    font-size: 25px;
 }
 
 .cta p {
-  margin: 0;
-  color: var(--text-card);
-  font-size: 13px;
+    margin: 0;
+    color: #a1a1aa;
+    font-size: 13px;
 }
 
 .ctaButton {
-  display: flex;
-  align-items: center;
-  padding: 13px 20px;
-  background: var(--primary);
-  color: white;
-  border-radius: 9px;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 700;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 20px;
+    background: #f97316;
+    color: white;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.ctaButton:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
 }
 
 @media screen and (max-width: 900px) {
