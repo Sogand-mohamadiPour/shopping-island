@@ -19,20 +19,16 @@ function Header() {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.brand}>
-        <img
-          src="/logo.webp"
-          className={styles.logo}
-          alt="Shopping Island"
-        />
+        <img src="/logo.webp" className={styles.logo} alt="Shopping Island" />
 
         <span className={styles.brandName}>Shopping Island</span>
       </Link>
 
       <nav className={styles.desktopNav}>
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/about">FAQ</Link>
-        <Link to="/contactus">Contact Us</Link>
+        <Link to="/">صفحه اصلی</Link>
+        <Link to="/products">محصولات</Link>
+        <Link to="/about">درباره ما</Link>
+        <Link to="/contactus">تماس با ما</Link>
       </nav>
 
       <div className={styles.headerActions}>
@@ -46,10 +42,9 @@ function Header() {
 
         <Link to="/basket">
           <FaShoppingBasket className={styles.icons} />
-
-          <span className={styles.countBasket}>
-            {state.countAll}
-          </span>
+          {state.countAll > 0 && (
+            <span className={styles.countBasket}>{state.countAll}</span>
+          )}
         </Link>
       </div>
 
@@ -65,16 +60,14 @@ function Header() {
         <Link to="/basket">
           <FaShoppingBasket className={styles.icons} />
 
-          <span className={styles.countBasket}>
-            {state.countAll}
-          </span>
+          {state.countAll > 0 && (
+            <span className={styles.countBasket}>{state.countAll}</span>
+          )}
         </Link>
 
         <button
           className={styles.menuButton}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation menu"
-          aria-expanded={menuOpen}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -86,19 +79,19 @@ function Header() {
         }`}
       >
         <Link to="/" onClick={closeMenu}>
-          Home
+          صفحه اصلی
         </Link>
 
         <Link to="/products" onClick={closeMenu}>
-          Products
+          محصولات
         </Link>
 
         <Link to="/about" onClick={closeMenu}>
-          FAQ
+          درباره ما
         </Link>
 
         <Link to="/contactus" onClick={closeMenu}>
-          Contact Us
+          تماس با ما
         </Link>
       </nav>
     </header>
