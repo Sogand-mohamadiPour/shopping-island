@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import { FaShoppingBasket, FaBars, FaTimes } from "react-icons/fa";
 
 import { useTheme } from "../context/ThemeContext";
@@ -12,18 +12,21 @@ function Header() {
   const { darkMode, toggleTheme } = useTheme();
   const [state] = useBasket();
 
-  const navigate = useNavigate();
-
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
   return (
     <header className={styles.header}>
-      <div className={styles.brand} onClick={() => navigate("/")}>
-        <img src="../../public/logo.webp" className={styles.logo} />
+      <Link to="/" className={styles.brand}>
+        <img
+          src="/logo.webp"
+          className={styles.logo}
+          alt="Shopping Island"
+        />
+
         <span className={styles.brandName}>Shopping Island</span>
-      </div>
+      </Link>
 
       <nav className={styles.desktopNav}>
         <Link to="/">Home</Link>
@@ -44,14 +47,27 @@ function Header() {
         <Link to="/basket">
           <FaShoppingBasket className={styles.icons} />
 
-          <span className={styles.countBasket}>{state.countAll}</span>
+          <span className={styles.countBasket}>
+            {state.countAll}
+          </span>
         </Link>
       </div>
 
       <div className={styles.mobileControls}>
+        <button
+          className={styles.themeButton}
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+
         <Link to="/basket">
           <FaShoppingBasket className={styles.icons} />
-          <span className={styles.countBasket}>{state.countAll}</span>
+
+          <span className={styles.countBasket}>
+            {state.countAll}
+          </span>
         </Link>
 
         <button
@@ -72,12 +88,15 @@ function Header() {
         <Link to="/" onClick={closeMenu}>
           Home
         </Link>
+
         <Link to="/products" onClick={closeMenu}>
           Products
         </Link>
+
         <Link to="/about" onClick={closeMenu}>
           FAQ
         </Link>
+
         <Link to="/contactus" onClick={closeMenu}>
           Contact Us
         </Link>
