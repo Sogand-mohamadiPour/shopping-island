@@ -179,7 +179,7 @@ function Home() {
         </div>
 
         <Link to="/products" className={styles.ctaButton}>
-          Explore Products
+           دیدن محصولات
           <FaArrowRight />
         </Link>
       </section>

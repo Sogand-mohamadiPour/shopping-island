@@ -5,25 +5,22 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-=
         <div className={styles.footerBrand}>
           <div className={styles.brand}>
-            <span>S</span>
-            <strong>Shoppini Center</strong>
+            <strong>Shopping Island</strong>
           </div>
 
           <p>
-            Everything you need, all in one place. Discover quality products
-            at great prices.
+            تمام محصولات مورد نیاز شما در یک فروشگاه، مقایسه کنید و خرید کنید.
           </p>
 
           <div className={styles.socials}>
-            <a href="Facebook.com" aria-label="Facebook">
-              f
+            <a href="Telegram.com" aria-label="Telegram">
+              T
             </a>
 
             <a href="Instagram.com" aria-label="Instagram">
-              ig
+              IG
             </a>
 
             <a href="x.com" aria-label="Twitter">
@@ -33,53 +30,40 @@ function Footer() {
         </div>
 
         <div className={styles.footerColumn}>
-          <h3>Shop</h3>
-          <Link to="/products">All Products</Link>
-          <Link to="/products">New Arrivals</Link>
-          <Link to="/products">Best Sellers</Link>
-          <Link to="/products">Special Offers</Link>
+          <h3>فروشگاه</h3>
+          <Link to="/products">همه محصولات</Link>
+          <Link to="/products">تازه ترین ها</Link>
+          <Link to="/products">پر فروش ترین ها</Link>
+          <Link to="/products">پیشنهادات ویژه</Link>
         </div>
 
         <div className={styles.footerColumn}>
-          <h3>Help</h3>
-          <Link to="/contactus">Contact Us</Link>
-          <Link to="/about">FAQ</Link>
-          <Link to="/shipping">Shipping & Delivery</Link>
-          <Link to="/returns">Returns & Refunds</Link>
-          <Link to="/about">About Us</Link>
+          <h3>دسترسی ها</h3>
+          <Link to="/contactus">تماس با ما</Link>
+          <Link to="/about">درباره ما</Link>
+          <Link to="/basket">بسته بندی و ارسال</Link>
+          <Link to="/returns">مرجوعی</Link>
         </div>
 
         <div className={styles.footerNewsletter}>
-          <h3>Stay in the loop</h3>
+          <h3>با ما بمانید</h3>
           <p>
-            Subscribe to our newsletter and get updates about new products
-            and special offers.
+            عضو باشگاه مشتریان ما شوید تا از آخرین تخفیف ها و اطلاعیه ها با خبر شوید.
           </p>
           <div className={styles.newsletterForm}>
-            <input
-              type="email"
-              placeholder="Your email address"
-            />
-            <button type="button">
-              Subscribe
-            </button>
+            <input type="email" placeholder="ایمیل خود را وارد کنید" />
+            <button type="button">ثبت ایمیل</button>
           </div>
         </div>
       </div>
 
       <div className={styles.footerBottom}>
-        <span>
-          © 2026 Shoppini Center. All rights reserved.
-        </span>
+        <span>© 2026 Shoppini Center. تمام حقوق محفوظ است.</span>
 
         <div>
-          <Link to="/privacy">
-            Privacy Policy
-          </Link>
+          <Link to="/privacy">قوانین</Link>
 
-          <Link to="/terms">
-            Terms & Conditions
-          </Link>
+          <Link to="/terms">کوکی ها</Link>
         </div>
       </div>
     </footer>
