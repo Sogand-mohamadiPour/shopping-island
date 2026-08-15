@@ -1,3 +1,5 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react-hooks/immutability */
 import { createContext, useContext, useEffect, useState } from 'react'
 
 import { apiproducts } from '../services/config';

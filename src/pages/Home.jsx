@@ -18,28 +18,23 @@ function Home() {
   const featuredProducts = data.products.slice(0, 4);
 
   return (
-    <main className={styles.home}>
+    <main>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.heroLabel}>WELCOME TO SHOPPINI CENTER</span>
+          <h2>
+            تمام چیزی که لازم دارید
+            <span>همه در یک مکان</span>
+          </h2>
 
-          <h1>
-            Everything you need.
-            <span> All in one place.</span>
-          </h1>
-
-          <p>
-            Discover quality products, great prices, and everything you need for
-            your everyday life.
-          </p>
+          <p>محصولاتی با کیفیت، پرداخت اقساط با اسنپ، ارسال سریع</p>
 
           <div className={styles.heroButtons}>
             <Link to="/products" className={styles.primaryButton}>
-              Shop Now
+              خرید محصول
               <FaArrowRight />
             </Link>
             <Link to="/about" className={styles.secondaryButton}>
-              Learn More
+              درباره ما
             </Link>
           </div>
         </div>
@@ -50,69 +45,57 @@ function Home() {
             <div className={styles.heroCardIcon}>S</div>
 
             <div>
-              <span>SHOPPINI</span>
-              <strong>Everything you love.</strong>
+              <span>Shopping Island</span>
+              <div>محصولاتی که به دنبالش هستید</div>
             </div>
           </div>
 
           <div className={styles.floatingCard}>
             <FaStar />
-            <span>Quality products</span>
+            <span>لباس های با کیفیت</span>
           </div>
         </div>
       </section>
 
-      <section className={styles.categories}>
+      <section>
         <div className={styles.sectionHeading}>
           <div>
-            <span>EXPLORE OUR STORE</span>
-            <h2>Shop by category</h2>
+            <span>نگاهی به فروشگاه</span>
+            <h2>دسته بندی ها</h2>
           </div>
 
           <Link to="/products">
-            View all
+            دیدن محصولات
             <FaArrowRight />
           </Link>
         </div>
 
         <div className={styles.categoryGrid}>
-          <Link
-            to="/products"
-            className={`${styles.categoryCard} ${styles.clothing}`}
-          >
+          <Link to="/products" className={styles.categoryCard}>
             <span>01</span>
-            <h3>Clothing</h3>
-            <p>Find your everyday style.</p>
+            <h3>مردانه</h3>
+            <p>برای تمامی فصل ها</p>
             <FaArrowRight />
           </Link>
 
-          <Link
-            to="/products"
-            className={`${styles.categoryCard} ${styles.electronics}`}
-          >
+          <Link to="/products" className={styles.categoryCard}>
             <span>02</span>
-            <h3>Electronics</h3>
-            <p>Technology for your life.</p>
+            <h3>زنانه</h3>
+            <p>تنوع بی نظیر</p>
             <FaArrowRight />
           </Link>
 
-          <Link
-            to="/products"
-            className={`${styles.categoryCard} ${styles.jewelry}`}
-          >
+          <Link to="/products" className={styles.categoryCard}>
             <span>03</span>
-            <h3>Jewelry</h3>
-            <p>Small details, big impact.</p>
+            <h3>جواهرات</h3>
+            <p>جزئیاتی بی بدیل</p>
             <FaArrowRight />
           </Link>
 
-          <Link
-            to="/products"
-            className={`${styles.categoryCard} ${styles.women}`}
-          >
+          <Link to="/products" className={styles.categoryCard}>
             <span>04</span>
-            <h3>Women's Fashion</h3>
-            <p>Something for every occasion.</p>
+            <h3>لوازم الکترونیک</h3>
+            <p>زندگی به روز</p>
             <FaArrowRight />
           </Link>
         </div>
@@ -120,10 +103,10 @@ function Home() {
 
       <section className={styles.features}>
         <div className={styles.featureHeading}>
-          <span>WHY SHOPPINI?</span>
-          <h2>Shopping should be simple.</h2>
+          <span>چرا جزیره ما؟</span>
+          <h2>خرید باید آسان و دلپذیر باشد</h2>
 
-          <p>We make finding and buying the things you need easier.</p>
+          <p>ما تمام مراحل خرید را برای شما آسان ساختیم.</p>
         </div>
 
         <div className={styles.featureGrid}>
@@ -132,9 +115,11 @@ function Home() {
               <FaShippingFast />
             </div>
 
-            <h3>Fast Delivery</h3>
+            <h3>ارسال سریع</h3>
 
-            <p>Get your favorite products delivered quickly and safely.</p>
+            <p>
+              محصولات با بسته بندی مناسب در سریع ترین زمان به دستتان خواهد رسید
+            </p>
           </div>
 
           <div className={styles.feature}>
@@ -142,11 +127,9 @@ function Home() {
               <FaShieldAlt />
             </div>
 
-            <h3>Secure Shopping</h3>
+            <h3>خرید امن</h3>
 
-            <p>
-              Your information and payments are handled with security in mind.
-            </p>
+            <p>اطلاعات و پرداخت شما در محیطی امن نزد ما خواهد ماند</p>
           </div>
 
           <div className={styles.feature}>
@@ -154,9 +137,9 @@ function Home() {
               <FaHeadset />
             </div>
 
-            <h3>Helpful Support</h3>
+            <h3>پشتیبان</h3>
 
-            <p>Have a question? Our support team is ready to help.</p>
+            <p>در تمام مراحل خرید، تیم پشتیبان همراه شماست</p>
           </div>
         </div>
       </section>
@@ -164,12 +147,11 @@ function Home() {
       <section className={styles.featured}>
         <div className={styles.sectionHeading}>
           <div>
-            <span>OUR PICKS</span>
-            <h2>Featured products</h2>
+            <h2>تازه ترین ها</h2>
           </div>
 
           <Link to="/products">
-            Browse all
+            دیدن همه
             <FaArrowRight />
           </Link>
         </div>
@@ -191,11 +173,9 @@ function Home() {
 
       <section className={styles.cta}>
         <div>
-          <span>READY TO SHOP?</span>
-
-          <h2>Find something you'll love.</h2>
-
-          <p>Explore our collection and discover your next favorite product.</p>
+          <span>آماده خرید هستید؟</span>
+          <h5>دیدن تازه ترین محصولات</h5>
+          <p>از کالکشن جدید ما دیدن فرمایید</p>
         </div>
 
         <Link to="/products" className={styles.ctaButton}>

@@ -1,12 +1,5 @@
-.home {
-  width: min(1200px, calc(100% - 40px));
-  margin: 0 auto;
-}
-
 .hero {
   min-height: 580px;
-  margin-top: 105px;
-  margin-bottom: 80px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
@@ -17,32 +10,20 @@
   max-width: 620px;
 }
 
-.heroLabel {
-  color: var(--primary);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-
-.hero h1 {
+.hero h2 {
   margin: 14px 0 20px;
   color: var(--text-primary);
-  font-size: clamp(42px, 5vw, 68px);
-  line-height: 1.05;
-  letter-spacing: -2px;
+  font-size: clamp(30px, 5vw, 68px);
 }
 
-.hero h1 span {
+.hero h2 span {
   display: block;
   color: var(--primary);
 }
 
 .hero p {
-  max-width: 520px;
-  margin-bottom: 30px;
   color: var(--text-secondary);
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 18px;
 }
 
 .heroButtons {
@@ -93,38 +74,36 @@
 }
 
 .circle {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   position: absolute;
-  background: var(--primary-light);
+  background: var(--border);
   border-radius: 50%;
 }
 
 .heroCard {
-  width: 280px;
-  height: 190px;
+  width: 250px;
+  height: 100px;
   position: relative;
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 25px;
+  padding: 15px;
   background: var(--bg-dark);
   color: white;
   border-radius: 20px;
-  transform: rotate(-6deg);
+  transform: rotate(-4deg);
   box-shadow: 0 25px 50px var(--shadow);
 }
 
 .heroCardIcon {
-  width: 55px;
-  height: 55px;
-  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--primary);
   border-radius: 14px;
-  font-size: 18px;
   font-weight: 800;
 }
 
@@ -132,19 +111,19 @@
   display: block;
   margin-bottom: 5px;
   color: var(--primary);
-  font-size: 9px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
-.heroCard strong {
+.heroCard div {
   font-size: 15px;
   line-height: 1.4;
 }
 
 .floatingCard {
   position: absolute;
-  right: 5%;
+  right: 10%;
   bottom: 65px;
   display: flex;
   align-items: center;
@@ -155,7 +134,7 @@
   border-radius: 10px;
   box-shadow: 0 10px 25px var(--shadow);
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -170,38 +149,18 @@
   margin-bottom: 25px;
 }
 
-.sectionHeading > span,
-.featureHeading > span,
-.cta > span {
-  color: var(--primary);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.2px;
-}
-
-.sectionHeading h2 {
-  margin: 5px 0 0;
-  color: var(--text-primary);
-  font-size: 25px;
-}
-
-.sectionHeading > a {
-  display: flex;
-  align-items: center;
-  gap: 7px;
+.sectionHeading>a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
 }
 
-.sectionHeading > a:hover {
+.sectionHeading>a:hover {
   color: var(--primary);
 }
 
-.categories {
-  margin-bottom: 100px;
-}
+
 
 .categoryGrid {
   display: grid;
@@ -223,6 +182,7 @@
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
+  background: #52525b;
 }
 
 .categoryCard:hover {
@@ -230,7 +190,7 @@
   box-shadow: 0 15px 30px var(--shadow);
 }
 
-.categoryCard > span {
+.categoryCard>span {
   position: absolute;
   top: 18px;
   right: 18px;
@@ -261,24 +221,7 @@
   opacity: 1;
 }
 
-.clothing {
-  background: var(--bg-dark);
-}
-
-.electronics {
-  background: #27272a;
-}
-
-.jewelry {
-  background: #3f3f46;
-}
-
-.women {
-  background: #52525b;
-}
-
 .features {
-  margin-bottom: 100px;
   padding: 55px;
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -294,11 +237,13 @@
 }
 
 .featureHeading p {
-  max-width: 280px;
-  margin: 0;
   color: var(--text-secondary);
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 14px;
+}
+
+.featureHeading span {
+  color: var(--primary);
+  font-weight: 600;
 }
 
 .featureGrid {
@@ -308,8 +253,8 @@
 }
 
 .featureIcon {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -319,21 +264,15 @@
   border-radius: 10px;
 }
 
-.feature h3 {
-  margin: 0 0 7px;
-  color: var(--text-primary);
-  font-size: 13px;
-}
 
 .feature p {
-  margin: 0;
+  font-size: 13.5px;
+  font-weight: 600;
   color: var(--text-secondary);
-  font-size: 11px;
-  line-height: 1.6;
 }
 
 .featured {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .productGrid {
@@ -342,47 +281,31 @@
   gap: 30px;
 }
 
-.loading,
-.error {
-  grid-column: 1 / -1;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.error {
-  color: var(--danger);
+.cta h5{
+  margin: 7px 0;
 }
 
 .cta {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   padding: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
   background: var(--bg-dark);
   color: white;
   border-radius: 18px;
-}
-
-.cta h2 {
-  margin: 7px 0;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .cta p {
   margin: 0;
-  color: var(--text-light);
+  color: var(--text-card);
   font-size: 13px;
 }
 
 .ctaButton {
-  flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 9px;
   padding: 13px 20px;
   background: var(--primary);
   color: white;
@@ -390,12 +313,6 @@
   text-decoration: none;
   font-size: 12px;
   font-weight: 700;
-  transition: 0.2s ease;
-}
-
-.ctaButton:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
 }
 
 @media screen and (max-width: 900px) {
