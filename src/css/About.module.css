@@ -95,7 +95,7 @@
   padding: 10px;
   box-sizing: border-box;
   background: #18181b;
-  color: #f97316;
+  color: var(--primary);
   border-radius: 10px;
 }
 
