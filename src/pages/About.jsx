@@ -14,44 +14,44 @@ function About() {
 
   const faqs = [
     {
-      question: "How can I place an order?",
+      question: "چگونه میتوانم یک سفارش ثبت کنم؟",
       answer:
-        "Browse our products, open the product you like, and add it to your basket. You can then review your basket and continue to checkout.",
+        "به صفحه محصولات بروید, محصول مورد نظر خود را انتخاب کنید, محصول را به سبد خرید اضافه کنید. حال سبد خرید خود را چک و تسویه کنید",
     },
     {
-      question: "Can I change the quantity of a product?",
+      question: "آیا میتوانم تعداد سفارش از یک محصول را تغییر دهم؟",
       answer:
-        "Yes. You can increase or decrease the quantity directly from your basket using the plus and minus buttons.",
+        "بله. به صورت مستقیم میتوانید تعداد محصول مورد نیاز را توسط دکمه ها کم و یا زیاد کنید",
     },
     {
-      question: "How can I remove a product from my basket?",
+      question: "چگونه میتوانم محصولم را از سبد خرید پاک کنم؟",
       answer:
-        "Open your basket and click the trash icon next to the product you want to remove. The product will immediately be removed from your basket.",
+        "سبد خرید خود را باز کنید و روی آیکون سطل زباله کنار محصول مورد نظر کلیک کنید محصول سریعا از سبد خرید شما پاک خواهد شد.",
     },
     {
-      question: "How much does shipping cost?",
+      question: "هزینه بسته بندی و ارسال چقدر است؟",
       answer:
-        "Shipping is currently free on all orders. There are no additional shipping fees added to your order.",
+        "در حال حاضر هزینه بسته بندی و ارسال در این فروشگاه رایگان است و مبلغی اضافه بر سبد خرید خود نخواهید دید.",
     },
     {
-      question: "Can I return a product?",
+      question: "چگونه میتوانم یک محصول را مرجوع کنم؟",
       answer:
-        "Yes. Products can be returned according to our return policy. Make sure the product is in its original condition before requesting a return.",
+        "محصول را با توجه به قوانین فروشگاه میتوانید مرجوع کنید. قبل از درخواست مرجوعی حتما چک کنید که محصول در شرایطی که ارسال شد قرار داشته باشد ",
     },
     {
-      question: "Are my payment details secure?",
+      question: "آیا پرداخت هایم امن هست؟",
       answer:
-        "Yes. We use secure payment processing to protect your payment information and personal data during checkout.",
+        "بله. ما پرداخت شما را در تمامی مراحل با تکنولوژی های خود امن نگاه میداریم.",
     },
     {
-      question: "How can I find a specific product?",
+      question: "چگونه محصول مورد نظر خود را پیدا کنم؟",
       answer:
-        "Use the search bar on the Products page to quickly find products by their name. You can also filter products by category.",
+        "از سرچی که در صفحه محصول قرار داده شده استفاده کنید. همچنین میتوانید در همان صفحه محصولات را طبق دسته بندی مشخص شده فیلتر کنید.",
     },
     {
-      question: "What categories of products are available?",
+      question: "چه دسته بندی برای محصولات خود دارید؟",
       answer:
-        "Our store currently includes Men's Clothing, Women's Clothing, Electronics, Jewelry, and other products that may be added in the future.",
+        "در حال حاضر دسته بندی ما شامل لباس مردانه, لباس زنانه, لوازم الکترونیکی و جواهرات هستند., دسته بندی های بیشتر نیز در آینده اضافه خواهد شد.",
     },
   ];
 
@@ -62,15 +62,14 @@ function About() {
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
-        <span className={styles.label}>
-          NEED SOME HELP?
-        </span>
+        <h2 className={styles.label}>
+          به کمک نیاز دارید؟
+        </h2>
         <h1>
-          Frequently Asked Questions
+          سوالات متداول
         </h1>
         <p>
-          Everything you need to know about shopping,
-          orders, delivery, and your basket.
+          تمام سوال ها و نکاتی که قبل از خرید باید به آن توجه کنید
         </p>
       </section>
 
@@ -80,10 +79,9 @@ function About() {
             <FaShippingFast />
           </div>
           <div>
-            <h3>Fast Delivery</h3>
+            <h3>ارسال سریع</h3>
             <p>
-              Get your products delivered quickly
-              and safely.
+              محصول خود را سالم و سریع دریافت کنید
             </p>
           </div>
         </div>
@@ -94,10 +92,9 @@ function About() {
             <FaUndo />
           </div>
           <div>
-            <h3>Easy Returns</h3>
+            <h3>قابل مرجوعی</h3>
             <p>
-              Simple return process for eligible
-              products.
+              پروسه مرجوعی آسان و منصفانه
             </p>
           </div>
         </div>
@@ -107,10 +104,9 @@ function About() {
           </div>
 
           <div>
-            <h3>Secure Payment</h3>
+            <h3>پرداخت امن</h3>
             <p>
-              Your payment information stays
-              protected.
+              اطلاعات پرداخت شما به صورت امن نزد ما خواهد ماند
             </p>
           </div>
         </div>
@@ -121,8 +117,8 @@ function About() {
         <div className={styles.sectionTitle}>
           <FaQuestionCircle />
           <div>
-            <span>QUESTIONS & ANSWERS</span>
-            <h2>How can we help?</h2>
+            <span>سوال های متداول</span>
+            <h2>چگونه میتوانیم کمکتان کنیم؟</h2>
           </div>
         </div>
 
@@ -166,20 +162,20 @@ function About() {
 
       <section className={styles.help}>
         <div>
-          <span>STILL HAVE QUESTIONS?</span>
+          <span>جواب سوال خود را دریافت نکردید؟</span>
           <h2>
-            We're here to help.
+            تیم پشتیبانی ما همراه شماست.
           </h2>
           <p>
-            Can't find what you're looking for?
-            Get in touch with our support team.
+            با مشکلی مواجه شدید؟
+            تیکت خود را ثبت کنید.
           </p>
         </div>
         <a
           href="mailto:support@shoppinicenter.com"
           className={styles.helpButton}
         >
-          Contact Support
+          ارتباط با پشتیبانی
         </a>
       </section>
     </main>

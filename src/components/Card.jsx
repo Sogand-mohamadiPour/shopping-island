@@ -23,7 +23,7 @@ function Card({ data }) {
     <div className={styles.card}>
       <img alt={title} src={image} />
       <p>{title.split(" ").slice(0, 3)}</p>
-      <p>price: {price}</p>
+      <p>قیمت: {price}</p>
       <hr />
       <div className={styles.d_icons}>
         <div className={styles.icon}>

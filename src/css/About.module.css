@@ -9,41 +9,35 @@
 }
 
 .label {
-  color: #f97316;
-  font-size: 11px;
+  color: var(--primary);
   font-weight: 800;
-  letter-spacing: 1.5px;
 }
 
 .hero h1 {
-  margin: 10px 0;
-  color: #18181b;
+  color: var(--text-primary);
   font-size: 38px;
   font-weight: 800;
 }
 
 .hero p {
-  max-width: 600px;
-  margin: auto;
-  color: #71717a;
-  font-size: 15px;
-  line-height: 1.7;
+  color: var(--text-secondary);
 }
 
 .infoGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }
 
 .infoCard {
+  direction: rtl;
   display: flex;
   align-items: center;
   gap: 14px;
   padding: 18px;
-  background: white;
-  border: 1px solid #e4e4e7;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
   border-radius: 13px;
   transition: 0.2s ease;
 }
@@ -62,8 +56,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff7ed;
-  color: #f97316;
+  background: var(--bg-card);
+  color: var(--primary);
   border-radius: 10px;
 }
 
@@ -73,19 +67,19 @@
 
 .infoCard h3 {
   margin: 0 0 4px;
-  color: #18181b;
+  color: var(--text-black);
   font-size: 13px;
 }
 
 .infoCard p {
   margin: 0;
-  color: #71717a;
+  color: var(--text-muted);
   font-size: 11px;
-  line-height: 1.5;
 }
 
 .faqSection {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+  direction: rtl;
 }
 
 .sectionTitle {
@@ -106,26 +100,24 @@
 }
 
 .sectionTitle span {
-  color: #f97316;
-  font-size: 10px;
+  color: var(--primary);
   font-weight: 800;
-  letter-spacing: 1px;
 }
 
 .sectionTitle h2 {
   margin: 3px 0 0;
-  color: #18181b;
-  font-size: 22px;
+  color: var(--text-black);
 }
 
 .accordion {
+  direction: rtl;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .faqItem {
-  background: white;
+  background: var(--bg-primary);
   border: 1px solid #e4e4e7;
   border-radius: 11px;
   overflow: hidden;
@@ -133,7 +125,7 @@
 }
 
 .faqItem:hover {
-  border-color: #d4d4d8;
+  border-color: var(--border);
 }
 
 .faqItem.active {
@@ -151,33 +143,30 @@
   padding: 0 18px;
   border: none;
   background: transparent;
-  color: #27272a;
-  text-align: left;
+  color: var(--text-black);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .question:hover {
-  color: #f97316;
+  color: var(--primary);
 }
 
 .chevron {
   flex-shrink: 0;
-  color: #a1a1aa;
-  font-size: 11px;
+  color: var(--text-light);
   transition: transform 0.25s ease,
               color 0.2s ease;
 }
 
 .rotate {
   transform: rotate(180deg);
-  color: #f97316;
+  color: var(--primary);
 }
 
 .answer {
   max-height: 0;
-  overflow: hidden;
   transition:
     max-height 0.3s ease,
     padding 0.3s ease;
@@ -189,13 +178,13 @@
 
 .answer p {
   margin: 0;
+  overflow: hidden;
   padding: 0 45px 18px 18px;
-  color: #71717a;
-  font-size: 13px;
-  line-height: 1.7;
+  color: var(--text-secondary);
 }
 
 .help {
+  direction: rtl;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -207,10 +196,9 @@
 }
 
 .help span {
-  color: #f97316;
-  font-size: 10px;
+  color: var(--primary);
+  font-size: 14px;
   font-weight: 800;
-  letter-spacing: 1px;
 }
 
 .help h2 {
@@ -220,24 +208,22 @@
 
 .help p {
   margin: 0;
-  color: #a1a1aa;
+  color: var(--text-light);
   font-size: 13px;
 }
 
 .helpButton {
-  flex-shrink: 0;
   padding: 12px 20px;
-  background: #f97316;
+  background: var(--primary);
   color: white;
   border-radius: 9px;
   text-decoration: none;
-  font-size: 13px;
   font-weight: 700;
   transition: 0.2s ease;
 }
 
 .helpButton:hover {
-  background: #ea580c;
+  background: var(--primary-hover);
   transform: translateY(-2px);
 }
 

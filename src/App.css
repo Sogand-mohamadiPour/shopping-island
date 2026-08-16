@@ -27,6 +27,7 @@ body {
     --text-secondary: #52525b;
     --text-muted: #71717a;
     --text-light: #a1a1aa;
+    --text-black: #000000;
 
     /* Brand */
     --primary: #f97316;
@@ -57,6 +58,7 @@ body {
     --text-secondary: #d4d4d8;
     --text-muted: #a1a1aa;
     --text-light: #71717a;
+    --text-black: #ffffff;
 
     /* Brand */
     --primary: #fb923c;

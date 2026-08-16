@@ -28,11 +28,9 @@ function PageProducts() {
   };
 
   const categoryHandler = (e) => {
-    let category = e.target.innerText.toLowerCase().trim();
+    const persianCategory = e.target.innerText.trim();
 
-    if (category === "all") {
-      category = "";
-    }
+    const category = categoryNames[persianCategory];
 
     setSearchFilter({
       ...searchFilter,
@@ -43,60 +41,53 @@ function PageProducts() {
   useEffect(() => {
     setSearchParams(searchFilter);
 
-    let filteredProducts = searchData(
-      data.products,
-      searchFilter.search
-    );
+    let filteredProducts = searchData(data.products, searchFilter.search);
 
-    filteredProducts = categoryData(
-      filteredProducts,
-      searchFilter.category
-    );
+    filteredProducts = categoryData(filteredProducts, searchFilter.category);
 
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowProducts(filteredProducts);
   }, [data.products, searchFilter, setSearchParams]);
+
+  const categoryNames = {
+    همه: "",
+    "لباس مردانه": "men's clothing",
+    الکترونیکی: "electronics",
+    "لباس زنانه": "women's clothing",
+    جواهرات: "jewelery",
+  };
 
   return (
     <>
       {/* ================= SEARCH & FILTER ================= */}
 
       <div className={styles.productControls}>
-
         <div className={styles.searchBox}>
           <CiSearch className={styles.searchIcon} />
 
           <input
             type="text"
-            placeholder="Search products..."
+            placeholder="محصول مورد نظر خود را جستجو کنید"
             value={search}
-            onChange={(e) =>
-              setSearch(e.target.value.toLowerCase())
-            }
+            onChange={(e) => setSearch(e.target.value.toLowerCase())}
           />
 
-          <button onClick={searchHandler}>
-            Search
-          </button>
+          <button onClick={searchHandler}>جستجو</button>
         </div>
 
-        <ul
-          className={styles.category}
-          onClick={categoryHandler}
-        >
-          <li>all</li>
-          <li>men's clothing</li>
-          <li>electronics</li>
-          <li>women's clothing</li>
-          <li>jewelery</li>
+        <ul className={styles.category} onClick={categoryHandler}>
+          <li>همه</li>
+          <li>لباس مردانه</li>
+          <li>الکترونیکی</li>
+          <li>لباس زنانه</li>
+          <li>جواهرات</li>
         </ul>
       </div>
 
       <div className={styles.content}>
-
         {data.error404 && (
           <p className={styles.error}>
-            Failed to fetch products.
+            متاسفانه خطایی رخ داده، مجددا تلاش کنید
           </p>
         )}
 
@@ -107,12 +98,8 @@ function PageProducts() {
         )}
 
         {showProducts.map((item) => (
-          <Card
-            key={item.id}
-            data={item}
-          />
+          <Card key={item.id} data={item} />
         ))}
-
       </div>
     </>
   );
