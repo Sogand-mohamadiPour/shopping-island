@@ -142,26 +142,6 @@
   color: var(--primary);
 }
 
-.sectionHeading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
-
-.sectionHeading>a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.sectionHeading>a:hover {
-  color: var(--primary);
-}
-
-
-
 .categoryGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -169,25 +149,30 @@
 }
 
 .categoryCard {
-  min-height: 190px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 22px;
   overflow: hidden;
-  color: white;
+  color: var(--text-primary);
   border-radius: 15px;
   text-decoration: none;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
-  background: #52525b;
+  background: var(--bg-card);
 }
 
 .categoryCard:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 30px var(--shadow);
+}
+
+.catImage{
+  width: 200px;
+  height: 200px;
+  margin: auto;
 }
 
 .categoryCard>span {
@@ -269,16 +254,6 @@
   font-size: 13.5px;
   font-weight: 600;
   color: var(--text-secondary);
-}
-
-.featured {
-  margin-bottom: 20px;
-}
-
-.productGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
 }
 
 .cta h5{
@@ -415,12 +390,12 @@
   }
 
   .categoryGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .categoryCard {
-    min-height: 160px;
+    /* min-height: 160px; */
     padding: 16px;
   }
 

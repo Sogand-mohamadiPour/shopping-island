@@ -8,14 +8,25 @@ import {
 } from "react-icons/fa";
 
 import { useProducts } from "../context/ProductContext";
-import Card from "../components/Card";
-import Loading from "../components/Loading";
 
 import styles from "../css/Home.module.css";
 
 function Home() {
   const data = useProducts();
-  const featuredProducts = data.products.slice(0, 4);
+  const data_products = {};
+
+  data.products.forEach((product) => {
+    if (!data_products[product.category]) {
+      data_products[product.category] = product;
+    }
+  });
+
+  const categoryNames = {
+    "men's clothing": "مردانه",
+    "women's clothing": "زنانه",
+    jewelery: "جواهرات",
+    electronics: "لوازم الکترونیک",
+  };
 
   return (
     <main>
@@ -72,31 +83,64 @@ function Home() {
 
         <div className={styles.categoryGrid}>
           <Link to="/products" className={styles.categoryCard}>
-            <span>01</span>
-            <h3>مردانه</h3>
-            <p>برای تمامی فصل ها</p>
-            <FaArrowRight />
+            <img
+              src={data_products["men's clothing"]?.image}
+              alt="مردانه"
+              className={styles.catImage}
+            />
+            <div className={styles.categoryOverlay}>
+              <span>01</span>
+              <h3>
+                {categoryNames[data_products["men's clothing"]?.category]}
+              </h3>
+              <p>برای تمامی فصل ها</p>
+              <FaArrowRight />
+            </div>
           </Link>
 
           <Link to="/products" className={styles.categoryCard}>
-            <span>02</span>
-            <h3>زنانه</h3>
-            <p>تنوع بی نظیر</p>
-            <FaArrowRight />
+            <img
+              src={data_products["women's clothing"]?.image}
+              alt="زنانه"
+              className={styles.catImage}
+            />
+            <div className={styles.categoryOverlay}>
+              <span>02</span>
+              <h3>
+                {categoryNames[data_products["women's clothing"]?.category]}
+              </h3>
+              <p>تنوع بی نظیر</p>
+              <FaArrowRight />
+            </div>
           </Link>
 
           <Link to="/products" className={styles.categoryCard}>
-            <span>03</span>
-            <h3>جواهرات</h3>
-            <p>جزئیاتی بی بدیل</p>
-            <FaArrowRight />
+            <img
+              src={data_products["jewelery"]?.image}
+              alt="جواهرات"
+              className={styles.catImage}
+            />
+
+            <div className={styles.categoryOverlay}>
+              <span>03</span>
+              <h3>{categoryNames[data_products["jewelery"]?.category]}</h3>
+              <p>جزئیاتی بی بدیل</p>
+              <FaArrowRight />
+            </div>
           </Link>
 
           <Link to="/products" className={styles.categoryCard}>
-            <span>04</span>
-            <h3>لوازم الکترونیک</h3>
-            <p>زندگی به روز</p>
-            <FaArrowRight />
+            <img
+              src={data_products["electronics"]?.image}
+              alt="لوازم الکترونیک"
+              className={styles.catImage}
+            />
+            <div className={styles.categoryOverlay}>
+              <span>04</span>
+              <h3>{categoryNames[data_products["electronics"]?.category]}</h3>
+              <p>زندگی به روز</p>
+              <FaArrowRight />
+            </div>
           </Link>
         </div>
       </section>
@@ -105,7 +149,6 @@ function Home() {
         <div className={styles.featureHeading}>
           <span>چرا جزیره ما؟</span>
           <h2>خرید باید آسان و دلپذیر باشد</h2>
-
           <p>ما تمام مراحل خرید را برای شما آسان ساختیم.</p>
         </div>
 
@@ -114,9 +157,7 @@ function Home() {
             <div className={styles.featureIcon}>
               <FaShippingFast />
             </div>
-
             <h3>ارسال سریع</h3>
-
             <p>
               محصولات با بسته بندی مناسب در سریع ترین زمان به دستتان خواهد رسید
             </p>
@@ -126,48 +167,16 @@ function Home() {
             <div className={styles.featureIcon}>
               <FaShieldAlt />
             </div>
-
             <h3>خرید امن</h3>
-
             <p>اطلاعات و پرداخت شما در محیطی امن نزد ما خواهد ماند</p>
           </div>
-
           <div className={styles.feature}>
             <div className={styles.featureIcon}>
               <FaHeadset />
             </div>
-
             <h3>پشتیبان</h3>
-
             <p>در تمام مراحل خرید، تیم پشتیبان همراه شماست</p>
           </div>
-        </div>
-      </section>
-
-      <section className={styles.featured}>
-        <div className={styles.sectionHeading}>
-          <div>
-            <h2>تازه ترین ها</h2>
-          </div>
-
-          <Link to="/products">
-            دیدن همه
-            <FaArrowRight />
-          </Link>
-        </div>
-
-        <div className={styles.productGrid}>
-          {data.error404 && (
-            <p className={styles.error}>Failed to fetch products.</p>
-          )}
-
-          {data.products.length === 0 && !data.error404 ? (
-            <div className={styles.loading}>
-              <Loading />
-            </div>
-          ) : (
-            featuredProducts.map((item) => <Card key={item.id} data={item} />)
-          )}
         </div>
       </section>
 
@@ -177,9 +186,8 @@ function Home() {
           <h5>دیدن تازه ترین محصولات</h5>
           <p>از کالکشن جدید ما دیدن فرمایید</p>
         </div>
-
         <Link to="/products" className={styles.ctaButton}>
-           دیدن محصولات
+          دیدن محصولات
           <FaArrowRight />
         </Link>
       </section>
