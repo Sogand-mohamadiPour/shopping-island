@@ -9,23 +9,20 @@ function Footer() {
           <div className={styles.brand}>
             <strong>Shopping Island</strong>
           </div>
-
           <p>
             تمام محصولات مورد نیاز شما در یک فروشگاه، مقایسه کنید و خرید کنید.
           </p>
-
           <div className={styles.socials}>
-            <a href="Telegram.com" aria-label="Telegram">
+            <Link to="Telegram.com" aria-label="Telegram">
               T
-            </a>
-
-            <a href="Instagram.com" aria-label="Instagram">
+            </Link>
+            <Link to="Instagram.com" aria-label="Instagram">
               IG
-            </a>
+            </Link>
 
-            <a href="x.com" aria-label="Twitter">
+            <Link to="x.com" aria-label="Twitter">
               𝕏
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -59,10 +56,8 @@ function Footer() {
 
       <div className={styles.footerBottom}>
         <span>© 2026 Shoppini Center. تمام حقوق محفوظ است.</span>
-
         <div>
           <Link to="/privacy">قوانین</Link>
-
           <Link to="/terms">کوکی ها</Link>
         </div>
       </div>

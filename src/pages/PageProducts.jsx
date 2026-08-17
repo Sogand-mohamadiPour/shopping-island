@@ -59,8 +59,6 @@ function PageProducts() {
 
   return (
     <>
-      {/* ================= SEARCH & FILTER ================= */}
-
       <div className={styles.productControls}>
         <div className={styles.searchBox}>
           <CiSearch className={styles.searchIcon} />
