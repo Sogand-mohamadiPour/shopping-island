@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaTrash, FaPlus, FaMinus, FaArrowLeft } from "react-icons/fa";
 
-import {useBasket} from '../context/basket/useBasket'
+import { useBasket } from "../context/basket/useBasket";
 import styles from "../css/Basket.module.css";
 
 function Basket() {
@@ -39,15 +39,10 @@ function Basket() {
     return (
       <main className={styles.emptyBasket}>
         <div className={styles.emptyIcon}>🛒</div>
-
-        <h1>Your basket is empty</h1>
-
-        <p>
-          Looks like you haven't added anything to your basket yet.
-        </p>
-
+        <h1>سبد خرید شما خالی است</h1>
+        <p>محصولی به سبد خود اضافه نکرده اید</p>
         <Link to="/products" className={styles.shopButton}>
-          Start Shopping
+          شروع خرید
         </Link>
       </main>
     );
@@ -55,101 +50,42 @@ function Basket() {
 
   return (
     <main className={styles.basketPage}>
-
-      {/* Header */}
-
       <div className={styles.pageHeader}>
         <div>
-          <span className={styles.smallTitle}>
-            YOUR SHOPPING BASKET
-          </span>
-
-          <h1>Your Basket</h1>
-
-          <p>
-            {state.countAll}{" "}
-            {state.countAll === 1 ? "item" : "items"} in your basket
-          </p>
+          <span className={styles.smallTitle}>سبد خرید</span>
+          <h1>سبد شما</h1>
+          <p>{state.countAll} محصول در سبد شما</p>
         </div>
 
-        <Link
-          to="/products"
-          className={styles.continueShopping}
-        >
+        <Link to="/products" className={styles.continueShopping}>
           <FaArrowLeft />
-          Continue Shopping
+          انتخاب محصول بیشتر
         </Link>
       </div>
 
-
-      {/* Basket content */}
-
       <div className={styles.basketContent}>
-
-        {/* Products */}
-
         <section className={styles.products}>
-
           {state.listBasket.map((item) => (
-
-            <article
-              className={styles.basketItem}
-              key={item.id}
-            >
-
-              {/* Image */}
-
+            <article className={styles.basketItem} key={item.id}>
               <div className={styles.imageContainer}>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                />
+                <img src={item.image} alt={item.title} />
               </div>
-
-
-              {/* Product information */}
-
               <div className={styles.productInfo}>
-
-                <h2>
-                  {item.title}
-                </h2>
-
-                <span className={styles.price}>
-                  ${item.price}
-                </span>
-
+                <h2>{item.title}</h2>
+                <span className={styles.price}>${item.price}</span>
                 <div className={styles.quantity}>
-
-                  <button
-                    onClick={() => minusHandler(item)}
-                  >
+                  <button onClick={() => minusHandler(item)}>
                     <FaMinus />
                   </button>
-
-                  <span>
-                    {item.countT}
-                  </span>
-
-                  <button
-                    onClick={() => plusHandler(item)}
-                  >
+                  <span>{item.countT}</span>
+                  <button onClick={() => plusHandler(item)}>
                     <FaPlus />
                   </button>
-
                 </div>
-
               </div>
 
-
-              {/* Item total + delete */}
-
               <div className={styles.itemRight}>
-
-                <strong>
-                  ${(item.price * item.countT).toFixed(2)}
-                </strong>
-
+                <strong>${(item.price * item.countT).toFixed(2)}</strong>
                 <button
                   className={styles.deleteButton}
                   onClick={() => deleteHandler(item)}
@@ -157,60 +93,39 @@ function Basket() {
                 >
                   <FaTrash />
                 </button>
-
               </div>
-
             </article>
-
           ))}
-
         </section>
-
-
-        {/* Summary */}
-
         <aside className={styles.summary}>
-
-          <h2>Order Summary</h2>
+          <h2>فیش نهایی</h2>
 
           <div className={styles.summaryRow}>
-            <span>Items</span>
+            <span>تعداد</span>
             <span>{state.countAll}</span>
           </div>
 
           <div className={styles.summaryRow}>
-            <span>Subtotal</span>
+            <span>قیمت</span>
             <span>${state.total.toFixed(2)}</span>
           </div>
 
           <div className={styles.summaryRow}>
-            <span>Shipping</span>
-            <span className={styles.free}>
-              Free
-            </span>
+            <span>بسته بندی و ارسال</span>
+            <span className={styles.free}>رایگان</span>
           </div>
 
           <div className={styles.divider}></div>
-
           <div className={styles.totalRow}>
-            <span>Total</span>
-            <strong>
-              ${state.total.toFixed(2)}
-            </strong>
+            <span>جمع کل</span>
+            <strong>${state.total.toFixed(2)}</strong>
           </div>
-
-          <button className={styles.checkoutButton}>
-            Proceed to Checkout
-          </button>
-
+          <button className={styles.checkoutButton}>پرداخت</button>
           <p className={styles.secureText}>
-            Secure checkout · Fast delivery · Easy returns
+            پرداخت امن · ارسال سریع · مرجوعی منصفانه
           </p>
-
         </aside>
-
       </div>
-
     </main>
   );
 }

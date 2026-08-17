@@ -1,5 +1,4 @@
 .basketPage {
-  width: min(1400px, calc(100% - 60px));
   margin: 120px auto 80px;
 }
 
@@ -11,22 +10,19 @@
 }
 
 .smallTitle {
-  color: #f97316;
-  font-size: 11px;
+  color: var(--primary);
   font-weight: 800;
-  letter-spacing: 1.5px;
 }
 
 .pageHeader h1 {
   margin: 7px 0 5px;
-  color: #18181b;
+  color: var(--text-primary);
   font-size: 34px;
   font-weight: 800;
 }
 
 .pageHeader p {
-  margin: 0;
-  color: #71717a;
+  color: var(--text-muted);
   font-size: 14px;
 }
 
@@ -35,8 +31,8 @@
   align-items: center;
   gap: 8px;
   padding: 11px 16px;
-  color: #52525b;
-  border: 1px solid #e4e4e7;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
   border-radius: 9px;
   text-decoration: none;
   font-size: 13px;
@@ -45,9 +41,8 @@
 }
 
 .continueShopping:hover {
-  background: #18181b;
-  color: white;
-  border-color: #18181b;
+  background: var(--bg-dark);
+  color: var(--bg-primary);
 }
 
 .basketContent {
@@ -64,19 +59,18 @@
 }
 
 .basketItem {
-  min-height: 150px;
   display: flex;
   align-items: center;
   padding: 18px;
-  background: white;
-  border: 1px solid #e4e4e7;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: 0.2s ease;
 }
 
 .basketItem:hover {
-  border-color: #fed7aa;
+  border-color: var(--bg-card);
   box-shadow:
     0 10px 25px rgba(0, 0, 0, 0.08);
 }
@@ -84,11 +78,10 @@
 .imageContainer {
   width: 115px;
   height: 115px;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fafafa;
+  background: var(--bg-secondary);
   border-radius: 12px;
 }
 
@@ -110,18 +103,14 @@
 .productInfo h2 {
   max-width: 450px;
   margin: 0 0 8px;
-  color: #18181b;
-  font-size: 15px;
+  color: var(--text-black);
   font-weight: 600;
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .price {
   margin-bottom: 14px;
-  color: #f97316;
+  color: var(--primary);
   font-size: 15px;
   font-weight: 700;
 }
@@ -130,8 +119,9 @@
   width: fit-content;
   display: flex;
   align-items: center;
-  border: 1px solid #e4e4e7;
+  border: 1px solid var(--border);
   border-radius: 8px;
+  background: white;
   overflow: hidden;
 }
 
@@ -143,14 +133,14 @@
   justify-content: center;
   border: none;
   background: #f4f4f5;
-  color: #52525b;
+  color: var(--text-secondary);
   cursor: pointer;
   transition: 0.2s ease;
 }
 
 .quantity button:hover {
-  background: #18181b;
-  color: white;
+  background: var(--bg-dark);
+  color: var(--bg-primary);
 }
 
 .quantity button svg {
@@ -175,7 +165,7 @@
 }
 
 .itemRight strong {
-  color: #18181b;
+  color: var(--text-primary);
   font-size: 17px;
 }
 
@@ -188,24 +178,20 @@
   border: none;
   border-radius: 8px;
   background: transparent;
-  color: #a1a1aa;
+  color: var(--text-light);
   cursor: pointer;
   transition: 0.2s ease;
 }
 
 .deleteButton:hover {
   background: #fef2f2;
-  color: #ef4444;
-}
-
-.deleteButton svg {
-  font-size: 14px;
+  color: var(--danger);
 }
 
 .summary {
   padding: 25px;
-  background: #18181b;
-  color: white;
+  background: var(--bg-dark);
+  color: var(--bg-primary);
   border-radius: 16px;
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.15);
@@ -231,7 +217,7 @@
 }
 
 .free {
-  color: #fb923c !important;
+  color: var(--primary);
 }
 
 .divider {
@@ -254,7 +240,7 @@
 }
 
 .totalRow strong {
-  color: #f97316;
+  color: var(--primary);
   font-size: 24px;
 }
 
@@ -263,7 +249,7 @@
   padding: 13px;
   border: none;
   border-radius: 9px;
-  background: #f97316;
+  background: var(--primary);
   color: white;
   font-size: 14px;
   font-weight: 700;
@@ -272,7 +258,7 @@
 }
 
 .checkoutButton:hover {
-  background: #ea580c;
+  background: var(--primary);
   transform: translateY(-1px);
 }
 
@@ -319,7 +305,7 @@
 
 .shopButton {
   padding: 12px 22px;
-  background: #f97316;
+  background: var(--primary);
   color: white;
   border-radius: 9px;
   text-decoration: none;
@@ -329,7 +315,7 @@
 }
 
 .shopButton:hover {
-  background: #ea580c;
+  background: var(primary);
   transform: translateY(-2px);
 }
 
