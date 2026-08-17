@@ -6,7 +6,6 @@ import {
   FaHeadset,
   FaStar,
 } from "react-icons/fa";
-
 import { useProducts } from "../context/ProductContext";
 
 import styles from "../css/Home.module.css";
@@ -75,7 +74,7 @@ function Home() {
             <h2>دسته بندی ها</h2>
           </div>
 
-          <Link to="/products">
+          <Link to="/products" className={styles.linkToProduct}>
             دیدن محصولات
             <FaArrowRight />
           </Link>
