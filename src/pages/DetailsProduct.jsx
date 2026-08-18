@@ -33,10 +33,10 @@ function DetailsProduct() {
   if (data.error404) {
     return (
       <main className={styles.errorPage}>
-        <h1>Something went wrong.</h1>
-        <p>We couldn't load the product information.</p>
+        <h1>خطایی رخ دادخ. لطفا دوباره تلاش کنید</h1>
+        <p>خطا در نمایش اطلاعات محصول</p>
 
-        <Link to="/products">Back to Products</Link>
+        <Link to="/products">دیدن محصولات</Link>
       </main>
     );
   }
@@ -45,11 +45,11 @@ function DetailsProduct() {
     return (
       <main className={styles.errorPage}>
         <span>404</span>
-        <h1>Product not found</h1>
-        <p>Sorry, we couldn't find the product you're looking for.</p>
+        <h1>محصول پیدا نشد</h1>
+        <p>در نمایش اطلاعات محصول مورد نظر خطایی رخ داده. لطفا دوباره محصول خود را انتخاب کنید</p>
         <Link to="/products">
           <FaArrowLeft />
-          Back to Products
+          دیدن محصولات
         </Link>
       </main>
     );
@@ -84,7 +84,7 @@ function DetailsProduct() {
     <main className={styles.page}>
       <Link to="/products" className={styles.back}>
         <FaArrowLeft />
-        Back to Products
+        دیدن محصولات
       </Link>
 
       <section className={styles.product}>
@@ -105,7 +105,7 @@ function DetailsProduct() {
             </div>
 
             <span>{product.rating?.rate || "4.5"}</span>
-            <small>({product.rating?.count || 0} reviews)</small>
+            <small>({product.rating?.count || 0} نظر)</small>
           </div>
 
           <div className={styles.price}>
@@ -118,7 +118,7 @@ function DetailsProduct() {
             {quantity === 0 ? (
               <button className={styles.addButton} onClick={addToBasket}>
                 <FaShoppingBasket />
-                Add to Basket
+                افزودن به سبد خرید
               </button>
             ) : (
               <div className={styles.quantity}>
@@ -137,18 +137,18 @@ function DetailsProduct() {
 
           <div className={styles.details}>
             <div>
-              <span>Category</span>
+              <span>دسته بندی</span>
               <strong>{product.category}</strong>
             </div>
 
             <div>
-              <span>Product ID</span>
+              <span>شماره محصول</span>
               <strong>#{product.id}</strong>
             </div>
 
             <div>
-              <span>Availability</span>
-              <strong className={styles.available}>In Stock</strong>
+              <span>وضعیت انبار</span>
+              <strong className={styles.available}>موجود</strong>
             </div>
           </div>
         </div>
@@ -156,21 +156,21 @@ function DetailsProduct() {
 
       <section className={styles.bottomInfo}>
         <div>
-          <h3>Fast Delivery</h3>
+          <h3>ارسال سریع</h3>
 
-          <p>Get your order delivered quickly and safely to your door.</p>
+          <p>تحویل سفارش در سریع ترین زمان ممکن درب منزل شما</p>
         </div>
 
         <div>
-          <h3>Secure Shopping</h3>
+          <h3>بسته بندی مناسب</h3>
 
-          <p>Your shopping experience is designed with security in mind.</p>
+          <p>بسته بندی متاسب با محصول جهت جلوگیری از آسیب به بسته</p>
         </div>
 
         <div>
-          <h3>Easy Returns</h3>
+          <h3>مرجوعی منصفانه</h3>
 
-          <p>Not satisfied? Check our return policy for easy returns.</p>
+          <p>در صورتی که محصول در شرایط ارسال شده باشد امکان تعویض به هر دلیلی وجود دارد.</p>
         </div>
       </section>
     </main>

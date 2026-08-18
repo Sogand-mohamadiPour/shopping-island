@@ -1,5 +1,5 @@
 .page {
-  width: min(1100px, calc(100% - 40px));
+  width: auto;
   margin: 115px auto 80px;
 }
 
@@ -8,15 +8,13 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 25px;
-  color: #71717a;
+  color: var(--text-muted);
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
   transition: 0.2s ease;
 }
 
 .back:hover {
-  color: #f97316;
+  color: var(--primary);
 }
 
 .back svg {
@@ -28,22 +26,20 @@
   grid-template-columns: 1fr 1fr;
   gap: 70px;
   padding: 35px;
-  background: white;
-  border: 1px solid #e4e4e7;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
   border-radius: 18px;
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .imageSection {
-  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fafafa;
+  background: var(--bg-secondary);
   border-radius: 14px;
 }
-
 
 .imageWrapper {
   width: 100%;
@@ -62,10 +58,6 @@
   transition: transform 0.3s ease;
 }
 
-.imageWrapper img:hover {
-  transform: scale(1.04);
-}
-
 .info {
   display: flex;
   flex-direction: column;
@@ -77,18 +69,15 @@
   margin-bottom: 12px;
   padding: 6px 10px;
   background: #fff7ed;
-  color: #f97316;
+  color: var(--primary);
   border-radius: 6px;
-  font-size: 10px;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 
 .info h1 {
   margin: 0 0 15px;
-  color: #18181b;
+  color: var(--text-primary);
   font-size: 29px;
   line-height: 1.3;
 }
@@ -103,35 +92,33 @@
 .stars {
   display: flex;
   gap: 3px;
-  color: #f97316;
+  color: var(--primary);
   font-size: 12px;
 }
 
 
-.rating > span {
-  color: #18181b;
-  font-size: 13px;
+.rating>span {
+  color: var(--text-primary);
   font-weight: 700;
 }
 
 .rating small {
-  color: #a1a1aa;
+  color: var(--text-light);
   font-size: 11px;
 }
 
 .price {
   margin-bottom: 20px;
-  color: #18181b;
+  color: var(--bg-dark);
   font-size: 28px;
-  font-weight: 800;
 }
 
 .description {
   margin: 0 0 25px;
-  color: #71717a;
+  color: var(--text-muted);
   font-size: 13px;
-  line-height: 1.8;
 }
+
 .purchase {
   margin-bottom: 25px;
 }
@@ -144,8 +131,8 @@
   justify-content: center;
   gap: 9px;
   border: none;
-  background: #18181b;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   border-radius: 9px;
   font-size: 13px;
   font-weight: 700;
@@ -154,7 +141,7 @@
 }
 
 .addButton:hover {
-  background: #f97316;
+  background: var(--primary);
   transform: translateY(-2px);
 }
 
@@ -164,7 +151,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #18181b;
+  background: var(--bg-dark);
   border-radius: 9px;
   overflow: hidden;
 }
@@ -177,13 +164,13 @@
   justify-content: center;
   border: none;
   background: transparent;
-  color: white;
+  color: var(--bg-primary);
   cursor: pointer;
   transition: 0.2s ease;
 }
 
 .quantity button:hover {
-  background: #f97316;
+  background: var(--primary);
 }
 
 .quantity span {
@@ -194,10 +181,10 @@
 
 .details {
   padding-top: 20px;
-  border-top: 1px solid #e4e4e7;
+  border-top: 1px solid var(--border);
 }
 
-.details > div {
+.details>div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -205,18 +192,17 @@
 }
 
 .details span {
-  color: #a1a1aa;
+  color: var(--text-light);
   font-size: 11px;
 }
 
 .details strong {
-  color: #52525b;
+  color: var(--text-secondary);
   font-size: 11px;
-  text-transform: capitalize;
 }
 
 .details .available {
-  color: #16a34a;
+  color: var(--success);
 }
 
 .bottomInfo {
@@ -226,23 +212,21 @@
   margin-top: 25px;
 }
 
-.bottomInfo > div {
+.bottomInfo>div {
   padding: 20px;
-  background: #fff7ed;
+  background: var(--bg-card);
   border-radius: 12px;
 }
 
 .bottomInfo h3 {
   margin: 0 0 7px;
-  color: #18181b;
-  font-size: 13px;
+  color: var(--text-primary);
 }
 
 .bottomInfo p {
   margin: 0;
-  color: #71717a;
+  color: var(--text-muted);
   font-size: 11px;
-  line-height: 1.6;
 }
 
 .loading {
@@ -263,20 +247,20 @@
   text-align: center;
 }
 
-.errorPage > span {
-  color: #f97316;
+.errorPage>span {
+  color: var(--primary);
   font-size: 60px;
   font-weight: 900;
 }
 
 .errorPage h1 {
   margin: 5px 0 10px;
-  color: #18181b;
+  color: var(--text-primary);
 }
 
 .errorPage p {
   margin: 0 0 20px;
-  color: #71717a;
+  color: var(--text-primary);
 }
 
 .errorPage a {
@@ -284,7 +268,7 @@
   align-items: center;
   gap: 8px;
   padding: 11px 17px;
-  background: #18181b;
+  background: var(--bg-dark);
   color: white;
   border-radius: 8px;
   text-decoration: none;
