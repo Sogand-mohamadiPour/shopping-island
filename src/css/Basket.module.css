@@ -293,7 +293,7 @@
 
 .emptyBasket h1 {
   margin: 0 0 8px;
-  color: #18181b;
+  color: var(--text-primary);
   font-size: 28px;
 }
 
@@ -306,7 +306,7 @@
 .shopButton {
   padding: 12px 22px;
   background: var(--primary);
-  color: white;
+  color: var(--text-primary);
   border-radius: 9px;
   text-decoration: none;
   font-size: 13px;
@@ -315,7 +315,7 @@
 }
 
 .shopButton:hover {
-  background: var(primary);
+  background: var(--primary-hover);
   transform: translateY(-2px);
 }
 
