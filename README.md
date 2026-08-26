@@ -198,6 +198,3 @@ The application uses the API to retrieve products including:
 * Image
 * Description
 * Rating
-
-```
-```
